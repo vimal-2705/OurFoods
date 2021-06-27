@@ -222,6 +222,7 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .right {
@@ -231,7 +232,7 @@ input:focus {
 .itemImage {
   width: auto;
   height: auto;
-  padding: 40px;
+  padding: 15px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -265,7 +266,7 @@ input:focus {
 }
 
 .itemDesc {
-  margin-right: 50px;
+  margin-right: 10px;
   margin-top: 30px;
   font-size: 18px;
   text-transform: capitalize;
@@ -273,7 +274,7 @@ input:focus {
 }
 
 .itemCategory {
-  margin-right: 50px;
+  margin-right: 10px;
   margin-top: 30px;
   font-size: 20px;
   text-transform: capitalize;
@@ -409,7 +410,7 @@ input:focus {
     width: 75%;
     height: 43vh;
   }
-  .singleItem {
+  .singleItemContainer {
     flex-wrap: wrap;
   }
   .itemImage {
@@ -419,11 +420,11 @@ input:focus {
 
 @media all and (max-width: 600px) {
   .item {
-    width: 70%;
+    width: 85%;
   }
   .image {
-    width: 80%;
-    height: 30vh;
+    width: 90%;
+    height: 25vh;
   }
 
   button {
