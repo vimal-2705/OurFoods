@@ -1,10 +1,10 @@
 import { React, useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal } from 'react-bootstrap';
 import { v4 as uuid } from "uuid";
 import { Link } from 'react-router-dom';
 import items from './data';
 
-function Home({ setMenu, Menu, filterItems, allCategories, setCategories }) {
+function Home({ setMenu, Menu, setCategories }) {
     const [State, setState] = useState({
         id: uuid(),
         title: '',
@@ -16,7 +16,8 @@ function Home({ setMenu, Menu, filterItems, allCategories, setCategories }) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const Submit = () => {
+    const Submit = (event) => {
+        event.preventDefault();
         let num = items.length;
         setMenu([State, ...Menu]);
         handleClose();
@@ -43,29 +44,26 @@ function Home({ setMenu, Menu, filterItems, allCategories, setCategories }) {
                 <Link to="/" style={{ textDecoration: "none", color: "black" }}> <div className="home">LOGO</div> </Link>
                 <button className="itemadd" onClick={handleShow}> add item </button>
             </div>
-            <div class="heading">
-                <h1>Our Foods</h1>
-            </div>
             <Modal show={show} onHide={handleClose} >
                 <Modal.Body>
                     <div class="heading">
                         <h2>Add Item</h2>
                     </div>
                     <form>
-                        <label for="name">Item Name</label>
+                        <label htmlFor="name">Item Name</label>
                         <input type="text" className="inputName" id="name" name="title" onChange={onchange} required /><br /><br />
-                        <label for="category">Category</label>
+                        <label htmlFor="category">Category</label>
                         <input type="text" className="inputCategory" id="category" name="category" onChange={onchange} required /><br /><br />
-                        <label for="image" className="noteText">Item Image</label>
+                        <label htmlFor="image" className="noteText">Item Image</label>
                         <input type="text" className="inputImage" id="image" name="img" onChange={onchange} required /><br /><br />
-                        <label for="amount">Amount</label>
+                        <label htmlFor="amount">Amount</label>
                         <input type="text" className="inputAmount" id="amount" name="price" onChange={onchange} required /><br /><br />
-                        <label for="description">Description</label>
+                        <label htmlFor="description">Description</label>
                         <input type="text" className="inputDescription" id="description" name="desc" onChange={onchange} required /><br /><br />
                         <div className="note"> ! Refreshing the page will delete the Added Items </div>
                         <div className="form-btn">
                             <button className="close-btn" onClick={handleClose}> Close </button>
-                            <button className="saveChanges-btn" onSubmit={Submit}> Save Changes </button>
+                            <button className="saveChanges-btn" onClick={Submit}> Save Changes </button>
                         </div>
                     </form>
                 </Modal.Body>

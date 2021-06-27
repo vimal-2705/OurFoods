@@ -13,7 +13,6 @@ const allCategories = ['all', ...new Set(items.map((item) => item.category))];
 function App() {
   const [menu, setMenu] = useState(items);
   const [categories, setCategories] = useState(allCategories);
-  const [id, setId] = useState(null);
 
   const filterItems = (category) => {
     if (category === 'all') {
@@ -27,14 +26,17 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Home setMenu={setMenu} Menu={menu} filterItems={filterItems} allCategories={allCategories} setCategories={setCategories} />
       <Switch>
         <Route exact path="/">
+          <Home setMenu={setMenu} Menu={menu} setCategories={setCategories} />
+          <div class="heading">
+            <h1>Our Foods</h1>
+          </div>
           <Categories filterItems={filterItems} Categories={categories} />
-          <Menu menuItems={menu} ID={id} setID={setId} />
+          <Menu menuItems={menu} />
         </Route>
         <Route exact path="/item/:id">
-          <SingleItem menuItems={menu} ID={id} />
+          <SingleItem menuItems={menu} />
         </Route>
         <Route component={NotFound} />
       </Switch>

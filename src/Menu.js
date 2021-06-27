@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-function Menu({ menuItems, setID }) {
+function Menu({ menuItems }) {
     return (
         <div className="menu">
             {menuItems.map((item) => {
                 const { id, title, price, img, desc } = item;
                 return (
-                    <article className="item" onClick={() => setID(id)}>
+                    <article className="item">
                         <Link to={`/item/${id}`} style={{ textDecoration: "none" }}>
                             <img src={img} alt={title} className="image" />
                             <div className="details">
