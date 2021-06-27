@@ -35,6 +35,7 @@ html {
   padding: 6px;
   padding-left: 13px;
   padding-right: 13px;
+  margin-top: 10px;
   margin-left: 40px;
   margin-right: 40px;
   font-size: 24px;
@@ -399,8 +400,8 @@ input:focus {
     width: 60%;
   }
   .image {
-    width: 75%;
-    height: 43vh;
+    width: 60%;
+    height: 35vh;
   }
   .singleItemContainer {
     flex-wrap: wrap;
@@ -424,13 +425,16 @@ input:focus {
   .itemImage {
     width: 80%;
   }
+  .image {
+    width: 70%;
+    height: 28vh;
+  }
 }
 
 @media all and (max-width: 420px) {
   form {
-    margin-top: 0;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 20px;
+    margin-top: 25px;
   }
   label {
     font-size: 17px;
@@ -461,13 +465,12 @@ input:focus {
   .right {
     width: 100%;
   }
-
   .item {
     width: 100%;
   }
   .image {
-    width: 100%;
-    height: 33vh;
+    width: 85%;
+    height: 23vh;
   }
   .itemPrice {
     font-size: 17px;
