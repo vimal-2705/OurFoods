@@ -494,4 +494,7 @@ input:focus {
   .backHome {
     font-size: 17px;
   }
+  .itemImage {
+    margin-top: 100px;
+  }
 }
