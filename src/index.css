@@ -414,27 +414,30 @@ input:focus {
     flex-wrap: wrap;
   }
   .itemImage {
-    width: 90%;
+    width: 85%;
+    margin-top: 300px;
+  }
+  .right {
+    width: 85%;
   }
 }
 
 @media all and (max-width: 600px) {
-  .item {
-    width: 85%;
-  }
-  .image {
-    width: 90%;
-    height: 25vh;
-  }
-
   button {
     margin-left: 5px;
     margin-right: 5px;
+  }
+  .item {
+    width: 70%;
+  }
+  .right {
+    width: 95%;
   }
 }
 
 @media all and (max-width: 450px) {
   form {
+    margin-top: 0;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -449,6 +452,9 @@ input:focus {
     margin-top: 2px;
     padding: 3px;
   }
+  .itemHeading {
+    font-size: 25px;
+  }
   .saveChanges-btn {
     padding: 7px;
     font-size: 16px;
@@ -459,5 +465,33 @@ input:focus {
   }
   .noteText::before {
     font-size: 8px;
+  }
+  .right {
+    width: 100%;
+  }
+  .item {
+    width: 100%;
+  }
+  .image {
+    width: 100%;
+    height: 33vh;
+  }
+  .itemImage {
+    margin-top: 140px;
+  }
+  .itemPrice {
+    font-size: 17px;
+  }
+  .itemDesc {
+    font-size: 16px;
+  }
+  .itemCategory {
+    font-size: 17px;
+  }
+  .sideHeading {
+    font-size: 17px;
+  }
+  .backHome {
+    font-size: 17px;
   }
 }
