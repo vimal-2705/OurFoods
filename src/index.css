@@ -1,0 +1,423 @@
+html {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.heading {
+  position: relative;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: capitalize;
+  text-shadow: 0 0 4px rgba(255, 166, 0, 0.7);
+}
+
+.categories {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn-category {
+  background-color: white;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  padding: 6px;
+  padding-left: 13px;
+  padding-right: 13px;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: 24px;
+  color: rgba(255, 166, 0, 0.95);
+  transition: 0.5s;
+}
+
+.btn-category:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(233, 152, 1, 0.9);
+}
+
+.btn-category:hover {
+  cursor: pointer;
+  background-color: rgba(255, 166, 0, 0.8);
+  color: white;
+  border-radius: 2px;
+}
+
+.menu {
+  width: 100%;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 30%;
+  margin: 50px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.details {
+  width: 100%;
+  padding: 5px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-details {
+  width: 100%;
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.amount {
+  color: rgba(255, 166, 0, 0.8);
+}
+
+.desc {
+  width: 100%;
+  color: rgba(0, 175, 175, 0.8);
+  font-weight: normal;
+  margin-top: 30px;
+  text-transform: capitalize;
+}
+
+.line {
+  width: 100%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.image {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 33vh;
+  width: 75%;
+  border: 5px solid rgba(255, 166, 0, 0.8);
+  border-radius: 5px;
+  z-index: 1;
+  margin-top: 0;
+}
+
+.AddItemContainer {
+  text-align: center;
+  margin: 40px;
+}
+
+form {
+  margin-top: 15px;
+}
+
+label {
+  margin-right: 10px;
+  margin-left: 30px;
+  margin-top: 10px;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+input {
+  outline: none;
+  padding: 5px;
+  font-size: 15px;
+  border: 2px solid rgba(218, 141, 0, 0.8);
+  color: rgba(0, 175, 175, 0.9);
+}
+
+input:focus {
+  border: 3px solid rgba(0, 175, 175, 0.9);
+}
+
+.itemadd {
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  padding: 8px;
+  margin-right: 22px;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(190, 126, 6, 0.9);
+  background: linear-gradient(
+        -45deg,
+        rgba(255, 166, 0, 0.9) 40%,
+        white 0 60%,
+        rgba(255, 166, 0, 0.9) 0
+      )
+      right/300% 100% no-repeat,
+    linear-gradient(
+        -45deg,
+        transparent 40%,
+        rgba(255, 166, 0, 0.9) 0 60%,
+        transparent 0
+      )
+      right/300% 100% no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.8s;
+}
+
+.itemadd:hover {
+  background-position: left;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(255, 166, 0, 0.9);
+}
+
+.itemadd:focus {
+  outline: none;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 20px orange;
+  position: sticky;
+  top: 0;
+}
+
+.home {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.home:hover {
+  cursor: pointer;
+}
+
+.singleItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right {
+  padding: 30px;
+}
+
+.itemImage {
+  width: auto;
+  height: auto;
+  padding: 40px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.itemHeading {
+  padding: 10px;
+  font-size: 35px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: capitalize;
+  text-shadow: 0 0 4px rgba(255, 166, 0, 0.7);
+}
+
+.sideHeading {
+  background: #ffeec1;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  color: #b97f00;
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.itemPrice {
+  margin-top: 50px;
+  font-size: 20px;
+  color: rgba(0, 102, 102, 0.9);
+}
+
+.itemDesc {
+  margin-right: 50px;
+  margin-top: 30px;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: rgba(0, 102, 102, 0.85);
+}
+
+.itemCategory {
+  margin-right: 50px;
+  margin-top: 30px;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: rgba(0, 102, 102, 0.9);
+}
+
+.backHome {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 10px rgba(236, 154, 0, 0.9);
+  text-transform: capitalize;
+  padding: 8px;
+  margin-top: 35px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(170, 111, 0, 0.9);
+  background: linear-gradient(
+        -45deg,
+        rgba(255, 166, 0, 0.9) 40%,
+        white 0 60%,
+        rgba(255, 166, 0, 0.9) 0
+      )
+      right/300% 100% no-repeat,
+    linear-gradient(
+        -45deg,
+        transparent 40%,
+        rgba(255, 166, 0, 0.9) 0 60%,
+        transparent 0
+      )
+      right/300% 100% no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.8s;
+}
+
+.backHome:hover {
+  background-position: left;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.backHome:focus {
+  outline: none;
+}
+
+.note {
+  padding: 10px 30px 10px 30px;
+  margin-left: 26px;
+  margin-right: 26px;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(253, 183, 183, 0.4);
+  border-radius: 3px;
+  color: rgb(109, 0, 0, 0.8);
+}
+
+.noteText {
+  position: relative;
+}
+
+.noteText::before {
+  content: "Address/Path";
+  position: absolute;
+  color: rgb(145, 0, 0);
+  top: 25px;
+  font-size: 12px;
+}
+
+.form-btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  color: white;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+  margin-right: 15px;
+  background-color: rgba(255, 166, 0, 0.9);
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.close-btn:hover {
+  background-color: white;
+  color: rgba(255, 166, 0, 0.9);
+  box-shadow: 0 0 10px rgba(255, 166, 0, 0.9);
+}
+
+.close-btn:focus {
+  outline: none;
+}
+
+.saveChanges-btn {
+  color: white;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  padding: 8px;
+  font-size: 18px;
+  margin-right: 26px;
+  background-color: rgba(255, 166, 0);
+  border-radius: 3px;
+  transition: 0.5s;
+}
+
+.saveChanges-btn:hover {
+  background-color: white;
+  color: rgba(255, 166, 0);
+  box-shadow: 0 0 10px rgba(255, 166, 0, 0.9);
+}
+
+.saveChanges-btn:focus {
+  outline: none;
+}
+
+@media all and (max-width: 1000px) {
+  .item {
+    width: 60%;
+  }
+  .image {
+    width: 75%;
+    height: 43vh;
+  }
+  .singleItem {
+    flex-wrap: wrap;
+  }
+  .itemImage {
+    width: 90%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .item {
+    width: 70%;
+  }
+  .image {
+    width: 80%;
+    height: 30vh;
+  }
+
+  button {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
