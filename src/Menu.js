@@ -7,7 +7,7 @@ function Menu({ menuItems }) {
             {menuItems.map((item) => {
                 const { id, title, price, img, desc } = item;
                 return (
-                    <article className="item">
+                    <article className="item" key={id}>
                         <Link to={`/item/${id}`} style={{ textDecoration: "none" }}>
                             <img src={img} alt={title} className="image" />
                             <div className="details">

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import items from './data';
 
 function Home({ setMenu, Menu, setCategories }) {
+    var d = new Date();
     const [State, setState] = useState({
         id: uuid(),
         title: '',
@@ -16,9 +17,12 @@ function Home({ setMenu, Menu, setCategories }) {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
     const Submit = (event) => {
         event.preventDefault();
         let num = items.length;
+        setState({ ...State, id: d.getMilliseconds() })
+        console.log(State.id);
         setMenu([State, ...Menu]);
         handleClose();
         const obj = {
@@ -49,7 +53,7 @@ function Home({ setMenu, Menu, setCategories }) {
                     <div class="heading">
                         <h2>Add Item</h2>
                     </div>
-                    <form>
+                    <form onSubmit={Submit}>
                         <label htmlFor="name">Item Name</label>
                         <input type="text" className="inputName" id="name" name="title" onChange={onchange} required /><br /><br />
                         <label htmlFor="category">Category</label>
@@ -63,7 +67,7 @@ function Home({ setMenu, Menu, setCategories }) {
                         <div className="note"> ! Refreshing the page will delete the Added Items </div>
                         <div className="form-btn">
                             <button className="close-btn" onClick={handleClose}> Close </button>
-                            <button className="saveChanges-btn" onClick={Submit}> Save Changes </button>
+                            <button className="saveChanges-btn"> Save Changes </button>
                         </div>
                     </form>
                 </Modal.Body>
