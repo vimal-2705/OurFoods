@@ -49,9 +49,7 @@ function Home({ setCategories, filterItems }) {
             </div>
             <Modal show={show} onHide={handleClose} >
                 <Modal.Body>
-                    <div class="heading">
-                        <h2>Add Item</h2>
-                    </div>
+                    <div class="heading">Add Item </div>
                     <form onSubmit={Submit}>
                         <label htmlFor="name">Item Name</label>
                         <input type="text" className="inputName" id="name" name="title" onChange={onchange} required /><br /><br />

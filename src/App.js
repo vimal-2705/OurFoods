@@ -29,9 +29,7 @@ function App() {
       <Home setCategories={setCategories} filterItems={filterItems} />
       <Switch>
         <Route exact path="/">
-          <div class="heading">
-            <h1>Our Foods</h1>
-          </div>
+          <div class="heading">Our Foods</div>
           <Categories filterItems={filterItems} Categories={categories} />
           <Menu menuItems={menu} />
         </Route>
