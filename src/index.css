@@ -218,6 +218,7 @@ input:focus {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  margin-top: 20px;
 }
 
 .right {
@@ -508,10 +509,10 @@ input:focus {
     justify-content: center;
   }
   .menu {
-    margin-top: 10px;
+    margin-top: 22px;
   }
   .heading {
-    font-size: 30px;
+    font-size: 33px;
   }
   .categories {
     margin-top: 15px;
