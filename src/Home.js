@@ -4,7 +4,7 @@ import { v4 as uuid } from "uuid";
 import { Link } from 'react-router-dom';
 import items from './data';
 
-function Home({ setMenu, Menu, setCategories }) {
+function Home({ setCategories, filterItems }) {
     var d = new Date();
     const [State, setState] = useState({
         id: uuid(),
@@ -22,8 +22,6 @@ function Home({ setMenu, Menu, setCategories }) {
         event.preventDefault();
         let num = items.length;
         setState({ ...State, id: d.getMilliseconds() })
-        console.log(State.id);
-        setMenu([State, ...Menu]);
         handleClose();
         const obj = {
             id: State.id,
@@ -36,6 +34,7 @@ function Home({ setMenu, Menu, setCategories }) {
         items[num] = obj;
         const newCategories = ['all', ...new Set(items.map((item) => item.category))];
         setCategories(newCategories);
+        filterItems(obj.category);
     };
 
     const onchange = (event) => {

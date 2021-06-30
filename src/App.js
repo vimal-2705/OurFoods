@@ -26,7 +26,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <Home setMenu={setMenu} Menu={menu} setCategories={setCategories} />
+      <Home setCategories={setCategories} filterItems={filterItems} />
       <Switch>
         <Route exact path="/">
           <div class="heading">
