@@ -32,12 +32,11 @@ html {
   outline: none;
   border: none;
   text-transform: capitalize;
+  min-width: 140px;
   padding: 6px;
-  padding-left: 13px;
-  padding-right: 13px;
   margin-top: 10px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 20px;
+  margin-right: 20px;
   font-size: 24px;
   color: rgba(255, 166, 0, 0.95);
   transition: 0.5s;
@@ -412,6 +411,13 @@ input:focus {
   }
 }
 
+@media all and (max-width: 750px) {
+  .image {
+    width: 65%;
+    height: 29vh;
+  }
+}
+
 @media all and (max-width: 600px) {
   button {
     margin-left: 5px;
@@ -429,6 +435,9 @@ input:focus {
   .image {
     width: 70%;
     height: 28vh;
+  }
+  .heading {
+    font-size: 40px;
   }
 }
 
@@ -468,13 +477,13 @@ input:focus {
   }
   .item {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-left: 40px;
     margin-right: 40px;
   }
   .image {
     width: 80%;
-    height: 21vh;
+    height: 22vh;
   }
   .itemPrice {
     font-size: 17px;
@@ -503,13 +512,12 @@ input:focus {
   .btn-category {
     margin: 10px;
     margin-top: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+    min-width: 115px;
     display: flex;
     justify-content: center;
   }
   .menu {
-    margin-top: 22px;
+    margin-top: 27px;
   }
   .heading {
     font-size: 33px;

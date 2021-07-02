@@ -45,7 +45,9 @@ function Home({ setCategories, filterItems }) {
         <section>
             <div className="navbar">
                 <Link to="/" style={{ textDecoration: "none", color: "black" }}> <div className="home">LOGO</div> </Link>
-                <button className="itemadd" onClick={handleShow}> add item </button>
+                <Link to="/">
+                    <button className="itemadd" onClick={handleShow}> add item </button>
+                </Link>
             </div>
             <Modal show={show} onHide={handleClose} >
                 <Modal.Body>
